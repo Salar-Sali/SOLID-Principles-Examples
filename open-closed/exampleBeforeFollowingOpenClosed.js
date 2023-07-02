@@ -1,9 +1,17 @@
+/* -------------------------------------------------------------------------- */
+/*                   before following open/closed principle                   */
+/* -------------------------------------------------------------------------- */
 const QuestionType = {
   Boolean: "boolean",
   MultiChoice: "multi choice",
   Text: "text",
 };
 
+/**
+ * print a list of questions with their choices:
+ * every time when a new question is added, this function needs to be modified
+ * this violates open/closed principle
+ */
 const printQuiz = (questions) => {
   questions.forEach((question) => {
     console.log(question.description);
@@ -26,7 +34,7 @@ const printQuiz = (questions) => {
   });
 };
 
-// list of questions:
+// a list of questions:
 const questions = [
   {
     type: QuestionType.Boolean,
